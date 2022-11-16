@@ -17,7 +17,7 @@ var engines = [
   'node',
   'oculus',
   'opera',
-  'opera_mobile',
+  'opera-android',
   'phantom',
   'rhino',
   'safari',
@@ -28,7 +28,7 @@ var trh = document.createElement('tr');
 var head = ['module', 'current'].concat(engines);
 for (i = 0; i < head.length; i++) {
   var th = document.createElement('th');
-  th.innerHTML = head[i].split('_').join('<br />');
+  th.innerHTML = head[i].split('-').join('<br />');
   trh.appendChild(th);
 }
 table.appendChild(trh);
