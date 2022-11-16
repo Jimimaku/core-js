@@ -12,6 +12,7 @@ var engines = [
   'edge',
   'electron',
   'firefox',
+  'firefox-android',
   'hermes',
   'ie',
   'ios',
