@@ -7,6 +7,7 @@ var engines = [
   'android',
   'bun',
   'chrome',
+  'chrome-android',
   'deno',
   'edge',
   'electron',
