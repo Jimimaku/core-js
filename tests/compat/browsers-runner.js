@@ -20,6 +20,7 @@ var engines = [
   'opera',
   'opera-android',
   'phantom',
+  'react-native',
   'rhino',
   'safari',
   'samsung'
