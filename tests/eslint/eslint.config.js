@@ -509,8 +509,7 @@ const base = {
   // avoid calling `cb()` inside of a `then()` or `catch()`
   'promise/no-callback-in-promise': ERROR,
   // disallow creating new promises with paths that resolve multiple times
-  // https://github.com/eslint-community/eslint-plugin-promise/issues/472
-  // 'promise/no-multiple-resolved': ERROR,
+  'promise/no-multiple-resolved': ERROR,
   // avoid nested `then()` or `catch()` statements
   'promise/no-nesting': ERROR,
   // avoid calling new on a `Promise` static method
@@ -1103,11 +1102,12 @@ const forbidES2021BuiltIns = {
 const forbidES2022BuiltIns = {
   // prefer `Object.hasOwn`
   'prefer-object-has-own': OFF,
-  'es/no-array-string-prototype-at': ERROR,
+  'es/no-array-prototype-at': ERROR,
   'es/no-error-cause': ERROR,
   'es/no-object-hasown': ERROR,
   'es/no-regexp-d-flag': ERROR,
   'es/no-regexp-unicode-property-escapes-2022': ERROR,
+  'es/no-string-prototype-at': ERROR,
   // prefer `.at()` method for index access and `String#charAt()`
   'unicorn/prefer-at': OFF,
 };
@@ -1124,14 +1124,18 @@ const forbidES2023BuiltIns = {
 const forbidES2024BuiltIns = {
   'es/no-arraybuffer-prototype-transfer': ERROR,
   'es/no-atomics-waitasync': ERROR,
-  'es/no-object-map-groupby': ERROR,
+  'es/no-map-groupby': ERROR,
+  'es/no-object-groupby': ERROR,
   'es/no-promise-withresolvers': ERROR,
   'es/no-regexp-v-flag': ERROR,
   'es/no-resizable-and-growable-arraybuffers': ERROR,
-  'es/no-string-prototype-iswellformed-towellformed': ERROR,
+  'es/no-string-prototype-iswellformed': ERROR,
+  'es/no-string-prototype-towellformed': ERROR,
 };
 
 const forbidES2025BuiltIns = {
+  // disallow duplicate named capture groups
+  'es/no-regexp-duplicate-named-capturing-groups': ERROR,
   'es/no-set-prototype-difference': ERROR,
   'es/no-set-prototype-intersection': ERROR,
   'es/no-set-prototype-isdisjointfrom': ERROR,
@@ -1225,6 +1229,8 @@ const transpiledAndPolyfilled = {
   'es/no-top-level-await': ERROR,
   // unpolyfillable es2015 builtins
   'es/no-proxy': ERROR,
+  // disallow duplicate named capture groups
+  'es/no-regexp-duplicate-named-capturing-groups': OFF,
   'es/no-string-prototype-normalize': ERROR,
   // unpolyfillable es2017 builtins
   'es/no-atomics': ERROR,

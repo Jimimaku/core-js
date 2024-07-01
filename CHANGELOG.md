@@ -18,6 +18,7 @@
     - `RegExp.escape`
   - Moved to stage 2.7, [June 2024 TC39 meeting](https://github.com/tc39/proposals/commit/4b8ee265248abfa2c88ed71b3c541ddd5a2eaffe)
   - Updated the way of escaping, [regex-escaping/77](https://github.com/tc39/proposal-regex-escaping/pull/77)
+  - Throw an error on non-strings, [regex-escaping/58](https://github.com/tc39/proposal-regex-escaping/pull/58)
 - Uses [`process.getBuiltinModule`](https://nodejs.org/docs/latest/api/process.html#processgetbuiltinmoduleid) for getting built-in NodeJS modules where it's available
 - Uses `https` instead of `http` in `URL` constructor feature detection to avoid extra notifications from some overly vigilant security scanners, [#1345](https://github.com/zloirock/core-js/issues/1345)
 - Some minor optimizations
@@ -33,6 +34,7 @@
   - Added [Deno 1.44](https://github.com/denoland/deno/releases/tag/v1.44.0) compat data mapping
   - Added Electron 32 compat data mapping
   - Added [Opera Android 83](https://forums.opera.com/topic/72570/opera-for-android-83) compat data mapping
+  - Added Oculus Quest Browser 34 compat data mapping
 
 ##### [3.37.1 - 2024.05.14](https://github.com/zloirock/core-js/releases/tag/v3.37.1)
 - Changes [v3.37.0...v3.37.1](https://github.com/zloirock/core-js/compare/v3.37.0...v3.37.1)
