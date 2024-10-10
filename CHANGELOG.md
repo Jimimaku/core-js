@@ -1,10 +1,38 @@
 ## Changelog
 ##### Unreleased
-- Fixed `core-js-pure/actual|full/promise/try` entries for the callback arguments support
+- [`Iterator` helpers proposal](https://github.com/tc39/proposal-iterator-helpers):
+  - Built-ins:
+    - `Iterator`
+      - `Iterator.from`
+      - `Iterator.prototype.drop`
+      - `Iterator.prototype.every`
+      - `Iterator.prototype.filter`
+      - `Iterator.prototype.find`
+      - `Iterator.prototype.flatMap`
+      - `Iterator.prototype.forEach`
+      - `Iterator.prototype.map`
+      - `Iterator.prototype.reduce`
+      - `Iterator.prototype.some`
+      - `Iterator.prototype.take`
+      - `Iterator.prototype.toArray`
+      - `Iterator.prototype[@@toStringTag]`
+  - Moved to stable ES, [October 2024 TC39 meeting](https://github.com/tc39/proposal-iterator-helpers/issues/284#event-14549961807)
+  - Added `es.` namespace modules, `/es/` and `/stable/` namespaces entries
+- [`Promise.try`](https://github.com/tc39/proposal-promise-try):
+  - Built-ins:
+    - `Promise.try`
+  - Moved to stable ES, [October 2024 TC39 meeting](https://github.com/tc39/proposal-promise-try/commit/53d3351687274952b3b88f3ad024d9d68a9c1c93)
+  - Added `es.` namespace module, `/es/` and `/stable/` namespaces entries
+  - Fixed `/actual|full/promise/try` entries for the callback arguments support
+- [`Math.sumPrecise` proposal](https://github.com/tc39/proposal-math-sum/):
+  - Built-ins:
+    - `Math.sumPrecise`
+  - Moved to stage 3, [October 2024 TC39 meeting](https://x.com/robpalmer2/status/1843829675036160179)
+  - Added `/actual/` namespace entries, unconditional forced replacement changed to feature detection
 - Compat data improvements:
   - [`JSON.parse` source text access proposal](https://github.com/tc39/proposal-json-parse-with-source) features marked as [supported from FF132](https://bugzilla.mozilla.org/show_bug.cgi?id=1913085)
   - `self` descriptor [is fixed](https://github.com/denoland/deno/issues/24683) in Deno 1.46.0
-  - Added Deno [1.46](https://github.com/denoland/deno/releases/tag/v1.46.0) compat data mapping
+  - Added Deno [1.46](https://github.com/denoland/deno/releases/tag/v1.46.0) and [2.0](https://github.com/denoland/deno/releases/tag/v2.0.0) compat data mapping
   - Added Electron 34 and updated Electron 33 compat data mapping
   - Added Opera Android 85 compat data mapping
   - Added Oculus Quest Browser 35 compat data mapping
