@@ -1,5 +1,19 @@
 ## Changelog
 ##### Unreleased
+- Always check regular expression flags by `flags` getter [PR](https://github.com/tc39/ecma262/pull/2791). Native methods are not fixed, only own implementation updated for:
+  - `RegExp.prototype[@@match]`
+  - `RegExp.prototype[@@replace]`
+- Improved handling of `RegExp` flags in polyfills of some methods in engines without proper support of `RegExp.prototype.flags` and without polyfill of this getter
+- Added feature detection for [a bug](https://bugs.webkit.org/show_bug.cgi?id=288595) that occurs when `this` is updated while `Set.prototype.difference` is being executed
+- Compat data improvements:
+  - [`Error.isError`](https://github.com/tc39/proposal-is-error) marked not supported in Node because of [a bug](https://github.com/nodejs/node/issues/56497)
+  - Added [Deno 2.3](https://github.com/denoland/deno/releases/tag/v2.3.0) compat data mapping
+  - Updated Electron 37 compat data mapping
+  - `Set.prototype.difference` marked not supported in Safari because of [a bug](https://bugs.webkit.org/show_bug.cgi?id=288595)
+  - `Set.prototype.difference` marked as supported from Bun 1.2.5 because of [a bug](https://bugs.webkit.org/show_bug.cgi?id=288595) was fixed
+
+##### [3.42.0 - 2025.04.30](https://github.com/zloirock/core-js/releases/tag/v3.42.0)
+- Changes [v3.41.0...v3.42.0](https://github.com/zloirock/core-js/compare/v3.41.0...v3.42.0) (142 commits)
 - [`Map` upsert proposal](https://github.com/tc39/proposal-upsert):
   - Moved to stage 2.7, [April 2025 TC39 meeting](https://x.com/robpalmer2/status/1911882240109261148)
   - Validation order of `WeakMap.prototype.getOrInsertComputed` updated following [tc39/proposal-upsert#79](https://github.com/tc39/proposal-upsert/pull/79)
@@ -32,7 +46,7 @@
 - Fixed missing forced replacement of [`AsyncIterator` helpers](https://github.com/tc39/proposal-async-iterator-helpers)
 - Added closing of sync iterator when async wrapper yields a rejection following [tc39/ecma262#2600](https://github.com/tc39/ecma262/pull/2600). Affected methods:
   - [`Array.fromAsync`](https://github.com/tc39/proposal-array-from-async) (due to the lack of async feature detection capability - temporarily, only in own `core-js` implementation)
-  - [`AsyncIterator.prototype.from`](https://github.com/tc39/proposal-async-iterator-helpers)
+  - [`AsyncIterator.from`](https://github.com/tc39/proposal-async-iterator-helpers)
   - [`Iterator.prototype.toAsync`](https://github.com/tc39/proposal-async-iterator-helpers)
 - Added detection for throwing on `undefined` initial parameter in `Iterator.prototype.reduce` (see [WebKit bug](https://bugs.webkit.org/show_bug.cgi?id=291651))
 - `core-js-compat` and `core-js-builder` API:
@@ -47,7 +61,7 @@
   - `Iterator.prototype.{ drop, reduce, take }` methods marked as fixed in Bun 1.2.11
   - Added [NodeJS 24.0](https://github.com/nodejs/node/pull/57609) compat data mapping
   - Updated Electron 36 and added Electron 37 compat data mapping
-  - Added Opera Android [88](https://forums.opera.com/topic/83800/opera-for-android-88) and 89 compat data mapping
+  - Added Opera Android [88](https://forums.opera.com/topic/83800/opera-for-android-88) and [89](https://forums.opera.com/topic/84437/opera-for-android-89) compat data mapping
   - Added Oculus Quest Browser 37 compat data mapping
 
 ##### [3.41.0 - 2025.03.01](https://github.com/zloirock/core-js/releases/tag/v3.41.0)

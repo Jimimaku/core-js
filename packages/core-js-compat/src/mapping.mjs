@@ -115,6 +115,7 @@ export default {
     [129, '2.0'],
     [130, '2.1'],
     [134, '2.2'],
+    [135, '2.3'],
   ],
   // https://releases.electronjs.org/
   // https://github.com/electron/electron/releases
@@ -172,7 +173,7 @@ export default {
     [132, '34.0'],
     [134, '35.0'],
     [136, '36.0'],
-    [137, '37.0'],
+    [138, '37.0'],
   ],
   // https://github.com/mdn/browser-compat-data/blob/main/browsers/opera.json
   ChromeToOpera(chrome) {
